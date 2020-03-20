@@ -8,8 +8,7 @@ A defanged IP address replaces every period "." with "[.]".
 '''
 class Solution:
     def defangIPaddr(self, address: str) -> str:
-        address = address.replace("." , "[.]")
-        return print(address)
+        return address.replace("." , "[.]")
 
 Test = Solution()
 Test.defangIPaddr("1.1.1.1")
