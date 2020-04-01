@@ -1,10 +1,10 @@
+# https://leetcode.com/problems/reverse-string/submissions/
+
 class Solution:
     def reverseString(self, s):
-        temp = s[:]
-        for index in range(0, (len(s)-1)//2):
-            temp[index] = s[len(s)-1-index]
-            temp[len(s)-1-index] = s[index]
-        return print(temp)
+        for i in range(0,len(s)//2):
+            s[i], s[len(s)-1-i] = s[len(s)-1-i], s[i]
+        return s
 
 t = Solution()
-t.reverseString(["H","a","n","n","a","h"])
+t.reverseString(["h","e","l","l","o"])
