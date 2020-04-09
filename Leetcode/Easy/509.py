@@ -1,9 +1,11 @@
+# Fibonacci Number
+# https://leetcode.com/problems/fibonacci-number/submissions/
+
 class Solution:
-    def fib(self, N: int) -> int:
-        state = 0
-        if(N == 0): state += 0
-        elif(N == 1): state += 1
-        return fib(N-1) + fib(N-2)
+    def fib(self, N):
+        if(N == 0): return 0
+        elif(N == 1): return 1
+        return self.fib(N-1) + self.fib(N-2)
     
 t = Solution()
 t.fib(2)
