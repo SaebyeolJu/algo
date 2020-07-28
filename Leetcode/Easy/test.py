@@ -1,9 +1,11 @@
-class Flight:
-    def __init__(self, number):
-        self._number = number
+def solution(s, n):
+    nums = []
+    for letter in s : 
+        if ord("a") <= ord(letter) <= ord("z") or ord("A") <= ord(letter) <= ord("Z"):
+            if ord(letter) + n >= ord("z") : 
+                nums.append(chr(ord(letter) + n - ord("z")))
+            nums.append(chr(ord(letter) + n))
+        else : nums.append(letter)
+    print("".join(nums))
 
-    def number(self):
-        return self._number
-
-f = Flight(5)
-print(f.number())
+s = solution("a B z",4)

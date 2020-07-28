@@ -3,10 +3,9 @@
 
 ''' 
 Note:
+postorder : left > right > root
 method ) recursive
 * 혼자서 짠게 아니라 Discuss 참고해서 코드 짬
-
-
 '''
 
 class Node:
@@ -15,7 +14,6 @@ class Node:
         self.children = children
 
 class Solution:
-    # left > right > root
     def postorder(self, root: 'Node') -> List[int]:
         ans = []
         if not root : return None
